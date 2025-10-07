@@ -20,6 +20,8 @@ def get_db_connection():
 
 @app.tool
 def list_employees(limit: int = 5) -> List[Dict[str, Any]]:
+
+    """ Lista los empleados en la base de datos """
     try:
         conn = get_db_connection()
         cursor = conn.cursor()

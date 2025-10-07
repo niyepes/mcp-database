@@ -8,9 +8,9 @@ services:
       POSTGRES_PASSWORD: test
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./dummy.sql:/docker-entrypoint-initdb.d/dummy.sql 
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:15432:5432"
     networks:
       - mcp_network
 
